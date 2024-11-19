@@ -92,19 +92,38 @@ section {
     font-weight: bold;
 }
 
+/* Rainbow Buy Now Button */
 .paypal-button {
     display: inline-block;
-    background-color: #ffc439;
-    color: #000;
+    background: linear-gradient(45deg, 
+        red, orange, yellow, green, blue, indigo, violet); /* Rainbow gradient */
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
+    background-size: 400% 400%;
+    animation: rainbowAnimation 3s ease infinite;
 }
 
+/* Add a rainbow animation effect */
+@keyframes rainbowAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Button Hover Effect */
 .paypal-button:hover {
-    background-color: #e0ac30;
+    background-color: #e0ac30; /* Change to a goldish color on hover */
+    animation: none; /* Stop animation on hover */
 }
 
 #payment {
