@@ -29,11 +29,11 @@ h1, h2 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: inline-flex;
 }
 
 .navbar ul li {
-    display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 .navbar ul li a {
@@ -44,6 +44,12 @@ h1, h2 {
 
 .navbar ul li a:hover {
     text-decoration: underline;
+}
+
+/* This styles the vertical bar (|) separators between links */
+.navbar ul li span {
+    color: white;  /* Set the color of the separator to white */
+    margin: 0 10px; /* Add space on both sides of the separator */
 }
 
 /* Sections */
@@ -111,8 +117,12 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .navbar ul li {
-        display: block;
         margin: 10px 0;
     }
 
